@@ -36,7 +36,7 @@ function stringifyOutput(output) {
 }
 
 function bumpAssertTime() {
-	assertAfter = (new Date()).getTime() + (1000 * 20)//(1000 * 60 * 60 * assertEveryHours);
+	assertAfter = (new Date()).getTime() + (1000 * 60 * 60 * assertEveryHours);
 }
 
 
