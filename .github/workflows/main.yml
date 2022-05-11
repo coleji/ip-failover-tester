@@ -60,7 +60,7 @@ jobs:
         run: |
           echo "REF_NAME=$(echo ${GITHUB_REF#refs/tags/} | tr / _ | sed 's/^v//g')" >> $GITHUB_ENV
       - name: docker login
-        run: run: docker login -u coleji -p ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u coleji -p ${{ secrets.DOCKER_PASSWORD }}
       - name: build image
         run: docker build -t coleji/ip-failover-tester:${{ env.REF_NAME }} .
       - name: push image
