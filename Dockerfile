@@ -1,4 +1,6 @@
 FROM node:16
+RUN apt-get update
+RUN apt-get install -y netcat
 RUN mkdir /app
 COPY src /app/src
 COPY node_modules /app/node_modules
