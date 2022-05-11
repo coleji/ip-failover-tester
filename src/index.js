@@ -4,7 +4,7 @@ const exec = require('child_process').exec;
 
 const {hosts: hostString, timeoutSeconds, runIntervalSeconds, assertEveryHours} = ini.parse(fs.readFileSync('./config.ini', 'utf-8'));
 
-const hostPairs = hostString.split("$");
+const hostPairs = hostString.split("_");
 
 const hosts = hostPairs.map(hostPair => {
 	const [alias, ip, port] = hostPair.split(",");
